@@ -1,0 +1,17 @@
+name: Robot Framework Browser stuff
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+    
+jobs:
+  robot_test:
+    runs-on: ubuntu-latest
+    - name: Robot Framework
+      uses: GoleeTeam/robotframework-browser-action@v1.0
+      with:
+        image: marketsquare/robotframework-browser
+        image_version: latest
+        tests_dir: '${{ github.workspace }}/tests/robot/SmashfinlandRobot'
+        reports_dir: '${{ github.workspace }}/tests/robot/SmashfinlandRobot'
