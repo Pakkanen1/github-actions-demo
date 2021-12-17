@@ -1,4 +1,4 @@
-name: Smasfinland Robot Tests
+name: Smasfinland Robot Browser Tests
 on:
   push:
     branches: [ master ]
