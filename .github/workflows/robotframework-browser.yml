@@ -11,7 +11,7 @@ jobs:
     name: Robot Framework 
     steps:
       - name: Robot Framework
-        uses: Pakkanen1/robotframework-browser-github-action@main
+        uses: Pakkanen1/robotframework-browser-github-action@v1.0-pakkanen1
         with:
           image_version: latest
           tests_dir: '${{ github.workspace }}/tests/robot/SmashfinlandRobot'
