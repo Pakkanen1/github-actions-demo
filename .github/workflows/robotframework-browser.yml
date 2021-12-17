@@ -17,4 +17,4 @@ jobs:
         with:
           image_version: latest
           tests_dir: '${{ github.workspace }}/robot/SmashfinlandRobot'
-          robot_command: 'ls'
+          robot_command: 'ls -la'
