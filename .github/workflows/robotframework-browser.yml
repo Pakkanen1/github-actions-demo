@@ -1,0 +1,20 @@
+name: Smasfinland Robot Framework Browser Test
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+    
+jobs:
+  robot_test:
+    runs-on: ubuntu-latest
+    name: Robot Framework 
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Robot Framework
+        uses: Pakkanen1/robotframework-browser-github-action@main
+        with:
+          image_version: latest
+          tests_dir: '${{ github.workspace }}/robot/SmashfinlandRobot'
+          robot_command: 'robot --outputdir /test/output /test'
