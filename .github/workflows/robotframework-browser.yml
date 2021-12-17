@@ -11,9 +11,8 @@ jobs:
     name: Robot Framework 
     steps:
       - name: Robot Framework
-        uses: tarathep/robotframework-github-action@v1.0
+        uses: Pakkanen1/robotframework-browser-github-action@v1.0
         with:
-          image: marketsquare/robotframework-browser
           image_version: latest
           tests_dir: '${{ github.workspace }}/tests/robot/SmashfinlandRobot'
-          reports_dir: '${{ github.workspace }}/tests/robot/SmashfinlandRobot'
+          command: '-c --outputdir ${{ github.workspace }}/tests/robot/SmashfinlandRobot/output ${{ github.workspace }}/tests/robot/SmashfinlandRobot'
