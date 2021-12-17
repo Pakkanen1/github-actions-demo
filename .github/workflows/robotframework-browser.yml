@@ -16,5 +16,5 @@ jobs:
         uses: Pakkanen1/robotframework-browser-github-action@main
         with:
           image_version: latest
-          tests_dir: './robot/SmashfinlandRobot'
+          tests_dir: '${{ github.workspace }}/robot/SmashfinlandRobot'
           robot_command: 'robot -o NONE -r NONE -l NONE -N /test'
