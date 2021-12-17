@@ -7,7 +7,14 @@ on:
     
 jobs:
   robot_test:
-    runs-on: docker://ghcr.io/marketsquare/robotframework-browser
+    runs-on: ubuntu-latest
+    name: Robot Framework 
     steps:
-      - name: Robot Framework 
-        run: robot -o NONE -l NONE -r NONE robot/SmashfinlandRobot
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Robot Framework
+        uses: Pakkanen1/robotframework-browser-github-action@main
+        with:
+          image_version: latest
+          tests_dir: 'robot/SmashfinlandRobot'
+          robot_command: 'robot -o NONE -r NONE -l NONE -N /test'
