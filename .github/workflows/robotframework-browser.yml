@@ -17,4 +17,4 @@ jobs:
         with:
           image_version: latest
           tests_dir: '${{ github.workspace }}/robot/SmashfinlandRobot'
-          robot_command: 'robot --outputdir /test/output /test'
+          robot_command: 'mkdir -p /test/output && robot --outputdir /test/output /test'
