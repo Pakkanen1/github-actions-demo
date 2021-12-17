@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Robot Framework 
     steps:
+      - name: Say Hi
+        run: echo Hi
       - name: Robot Framework
         uses: Pakkanen1/robotframework-browser-github-action@main
         with:
