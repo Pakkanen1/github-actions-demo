@@ -8,13 +8,6 @@ on:
 jobs:
   robot_test:
     runs-on: ubuntu-latest
-    name: Robot Framework 
     steps:
-      - name: Say Hi
-        run: echo Hi
-      - name: Robot Framework
-        uses: Pakkanen1/robotframework-browser-github-action@main
-        with:
-          image_version: latest
-          tests_dir: 'robot/SmashfinlandRobot'
-          robot_command: 'robot -o NONE -r NONE -l NONE -N /test'
+      - name: Robot Framework 
+        uses: docker://marketsquare/robotframework-browser
