@@ -7,7 +7,7 @@ on:
     
 jobs:
   robot_test:
-    runs-on: docker://marketsquare/robotframework-browser:latest
+    runs-on: docker://ghcr.io/marketsquare/robotframework-browser
     steps:
       - name: Robot Framework 
         run: robot -o NONE -l NONE -r NONE robot/SmashfinlandRobot
