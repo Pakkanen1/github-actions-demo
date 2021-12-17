@@ -10,4 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Robot Framework 
-        uses: docker://marketsquare/robotframework-browser
+        uses: docker://marketsquare/robotframework-browser:latest
+        with:
+          run: robot -o NONE -l NONE -r NONE robot/SmashfinlandRobot
