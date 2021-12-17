@@ -11,7 +11,7 @@ jobs:
     name: Robot Framework 
     steps:
       - name: Robot Framework
-        uses: GoleeTeam/robotframework-browser-action@v1.0
+        uses: tarathep/robotframework-github-action@v1.0
         with:
           image: marketsquare/robotframework-browser
           image_version: latest
